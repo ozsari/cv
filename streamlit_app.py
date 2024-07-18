@@ -18,7 +18,7 @@ st.write("📍 Istanbul, TURKEY")
 st.write("📧 ozsariahmet@yahoo.com | 🔗 [LinkedIn](https://linkedin.com/in/ahmet-ozsari-6615b756)")
 
 # Summary
-st.header(":blue[Summary]", divider='blue')
+st.header(':blue[Summary]', divider='blue')
 st.write("""
 Experienced Data Engineer with a strong background in business intelligence, data modeling, and cloud
 services. Proficient in designing and implementing end-to-end data solutions, with a focus on AWS and
