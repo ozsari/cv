@@ -1,24 +1,19 @@
 import streamlit as st
-import requests
 from PIL import Image
+import requests
 from io import BytesIO
 
 def load_image(url):
-    try:
-        response = requests.get(url)
-        response.raise_for_status()  # Raise an exception for bad status codes
-        img = Image.open(BytesIO(response.content))
-        return img
-    except Exception as e:
-        st.error(f"Error loading image from {url}: {str(e)}")
-        return None
+    response = requests.get(url)
+    img = Image.open(BytesIO(response.content))
+    return img
 
-st.set_page_config(page_title="Ahmet Ozsari - CV") # , layout="wide"
+st.set_page_config(page_title="Ahmet Ozsari - CV", layout="wide")
 
 # Header
 st.title("Ahmet Ozsari")
-st.write("Experienced Data Engineer")
-st.write("📍 4. Levent, Istanbul")
+st.subheader("Experienced Data Engineer")
+st.write("📍 4. Levent, Istanbul | 📞 +90 533 496 56 56")
 st.write("📧 ozsariahmet@yahoo.com | 🔗 [LinkedIn](https://linkedin.com/in/ahmet-ozsari-6615b756)")
 
 # Summary
@@ -76,67 +71,30 @@ job("Business Intelligence Assistant Manager", "Modanisa", "Jul 2019 - Feb 2022"
     "Migrated QlikView dashboards to Qlik Sense while gathering business requirements."
 ])
 
+# Certifications
+st.header("Certifications")
+
+cert_col1, cert_col2, cert_col3 = st.columns(3)
+
+with cert_col1:
+    qlik_logo = load_image("https://www.qlik.com/us/-/media/images/qlik/global/qlik-logo-2x.png")
+    st.image(qlik_logo, width=100)
+    st.write("QlikView Developer")
+
+with cert_col2:
+    st.image(qlik_logo, width=100)
+    st.write("Administer and Maintain Qlik Sense")
+
+with cert_col3:
+    dbt_logo = load_image("https://github.com/user-attachments/assets/8d6a29cb-9fe2-451c-8684-2fdc13a96a42")
+    st.image(dbt_logo, width=120)
+    st.write("DBT Fundamentals")
+
 # Education
 st.header("Education")
 st.subheader("Bachelor of Computer Engineering")
 st.write("Beykent University, Istanbul")
 st.write("*Sep 2008 - June 2013*")
-
-
-st.markdown("""
-<style>
-.cert-container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-top: 20px;
-    gap: 40px;
-}
-.cert-item {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-.cert-logo {
-    margin-bottom: 10px;
-}
-.cert-name {
-    font-weight: normal;
-    font-size: 14px;
-    text-align: left;
-}
-.qlik-logo {
-    width: 100px;
-}
-.dbt-logo {
-    width: 80px;
-}
-.multi-line {
-    line-height: 1.2;
-}
-</style>
-""", unsafe_allow_html=True)
-
-st.header("Certifications")
-
-cert_html = """
-<div class="cert-container">
-    <div class="cert-item">
-        <img src="https://www.qlik.com/us/-/media/images/qlik/global/qlik-logo-2x.png" class="cert-logo qlik-logo">
-        <div class="cert-name">QlikView Developer</div>
-    </div>
-    <div class="cert-item">
-        <img src="https://www.qlik.com/us/-/media/images/qlik/global/qlik-logo-2x.png" class="cert-logo qlik-logo">
-        <div class="cert-name multi-line">Administer and Maintain Qlik<br>Sense</div>
-    </div>
-    <div class="cert-item">
-        <img src="https://github.com/user-attachments/assets/8d6a29cb-9fe2-451c-8684-2fdc13a96a42" class="cert-logo dbt-logo">
-        <div class="cert-name">DBT Fundamentals</div>
-    </div>
-</div>
-"""
-
-st.markdown(cert_html, unsafe_allow_html=True)
 
 # Additional Information
 st.header("Additional Information")
