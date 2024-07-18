@@ -88,14 +88,16 @@ cert_col1, cert_col2, cert_col3 = st.columns(3)
 
 def display_certificate(col, logo_url, cert_name):
     with col:
-        container = st.container()
-        with container:
-            logo = load_image(logo_url)
-            if logo:
-                st.image(logo, width=100)
-            else:
-                st.write("Logo not available")
-            st.write(f"**{cert_name}**")
+        st.markdown(f"""
+        <div class="cert-container">
+            <div class="cert-logo">
+                <img src="{logo_url}" style="max-width: 100px; max-height: 100px;">
+            </div>
+            <div class="cert-name">
+                <strong>{cert_name}</strong>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
 
 display_certificate(
     cert_col1,
