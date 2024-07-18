@@ -82,40 +82,56 @@ st.subheader("Bachelor of Computer Engineering")
 st.write("Beykent University, Istanbul")
 st.write("*Sep 2008 - June 2013*")
 
+
+st.markdown("""
+<style>
+.cert-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+.cert-item {
+    flex: 1;
+    text-align: left;
+    padding: 10px;
+}
+.cert-logo {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+.cert-name {
+    font-weight: normal;
+    font-size: 16px;
+    margin-top: 5px;
+}
+.cert-name-multiline {
+    line-height: 1.2;
+}
+</style>
+""", unsafe_allow_html=True)
+
 # Certifications
 st.header("Certifications")
-cert_col1, cert_col2, cert_col3 = st.columns(3)
 
-def display_certificate(col, logo_url, cert_name):
-    with col:
-        st.markdown(f"""
-        <div class="cert-container">
-            <div class="cert-logo">
-                <img src="{logo_url}" style="max-width: 100px; max-height: 100px;">
-            </div>
-            <div class="cert-name">
-                <strong>{cert_name}</strong>
-            </div>
-        </div>
-        """, unsafe_allow_html=True)
+cert_html = """
+<div class="cert-container">
+    <div class="cert-item">
+        <img src="https://www.qlik.com/us/-/media/images/qlik/global/qlik-logo-2x.png" class="cert-logo">
+        <div class="cert-name">QlikView Developer</div>
+    </div>
+    <div class="cert-item">
+        <img src="https://www.qlik.com/us/-/media/images/qlik/global/qlik-logo-2x.png" class="cert-logo">
+        <div class="cert-name cert-name-multiline">Administer and Maintain Qlik<br>Sense</div>
+    </div>
+    <div class="cert-item">
+        <img src="https://github.com/user-attachments/assets/8d6a29cb-9fe2-451c-8684-2fdc13a96a42" class="cert-logo">
+        <div class="cert-name">DBT Fundamentals</div>
+    </div>
+</div>
+"""
 
-display_certificate(
-    cert_col1,
-    "https://www.qlik.com/us/-/media/images/qlik/global/qlik-logo-2x.png",
-    "QlikView Developer"
-)
-
-display_certificate(
-    cert_col2,
-    "https://www.qlik.com/us/-/media/images/qlik/global/qlik-logo-2x.png",
-    "Administer and Maintain Qlik Sense"
-)
-
-display_certificate(
-    cert_col3,
-    "https://github.com/user-attachments/assets/8d6a29cb-9fe2-451c-8684-2fdc13a96a42",
-    "DBT Fundamentals"
-)
+st.markdown(cert_html, unsafe_allow_html=True)
 
 # Additional Information
 st.header("Additional Information")
