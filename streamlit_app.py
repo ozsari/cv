@@ -11,14 +11,10 @@ def load_image(url):
 st.set_page_config(page_title="Ahmet Ozsari - CV", layout="wide")
 
 # Header
-col1, col2 = st.columns([1, 3])
-with col1:
-    
-with col2:
-    st.title("Ahmet Ozsari")
-    st.write("Experienced Data Engineer")
-    st.write("📍 4. Levent, Istanbul | 📞 +90 533 496 56 56")
-    st.write("📧 ozsariahmet@yahoo.com | 🔗 [LinkedIn](https://linkedin.com/in/ahmet-ozsari-6615b756)")
+st.title("Ahmet Ozsari")
+st.write("Experienced Data Engineer")
+st.write("📍 4. Levent, Istanbul | 📞 +90 533 496 56 56")
+st.write("📧 ozsariahmet@yahoo.com | 🔗 [LinkedIn](https://linkedin.com/in/ahmet-ozsari-6615b756)")
 
 # Summary
 st.header("Summary")
