@@ -13,7 +13,7 @@ st.set_page_config(page_title="Ahmet Ozsari - CV", layout="wide")
 # Header
 col1, col2 = st.columns([1, 3])
 with col1:
-    st.image("/api/placeholder/150/150", width=150)
+    
 with col2:
     st.title("Ahmet Ozsari")
     st.write("Experienced Data Engineer")
