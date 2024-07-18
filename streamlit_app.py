@@ -57,7 +57,7 @@ job("Data Engineer", "Justlife", "May 2022 - Present", [
     "Redesigned the entire ELT infrastructure on Google Cloud, enhancing data processing efficiency.",
     "Automated data collection and transformation processes using Kubernetes, Airflow, and dbt.",
     "Streamlined processes with GitHub and GitSync for collaborative code contributions.",
-    "Developed algorithms for alert mechanisms, achieving near real-time monitoring."
+    "Developed algorithms for alert mechanisms, achieving near real-time monitoring of operational issues and significantly increasing booking rates."
 ])
 
 job("Data Engineer", "Modanisa", "Feb 2022 - May 2022", [
@@ -65,11 +65,25 @@ job("Data Engineer", "Modanisa", "Feb 2022 - May 2022", [
     "Led automation of workloads and ETL projects, improving data processing efficiency.",
     "Utilized Airflow, Presto/Trino, Docker, Kubernetes, and AWS services.",
     "Applied BigQuery and Google Analytics for optimized data analysis and reporting."
-])
+])    
 
 job("Business Intelligence Assistant Manager", "Modanisa", "Jul 2019 - Feb 2022", [
     "Transformed the team into federated development units for faster BI deployment.",
     "Migrated QlikView dashboards to Qlik Sense while gathering business requirements."
+])
+
+job("Senior Business Intelligence Specialist", "Zubizu", "Oct 2016 - Jul 2019", [
+    "Developed dashboards that enabled senior executives to make data-driven strategic and operational decisions.",
+    "Planned, designed, and implemented end-to-end BI solutions using SSIS and Power BI, enhancing data analysis capabilities.",
+    "Created Qlik Widgets to improve visualization efficiency and user experience.",
+    "Collaborated closely with internal teams and Dogus companies to understand and implement customized Qlik solutions using Agile delivery methods.",
+    "Contributed to the implementation of a mobile app environment, significantly enhancing Qlik Sense usage."
+])
+
+job("BI Consultant", "Qlik Turkey", "Nov 2013 - Oct 2016", [
+    "Successfully collaborated with a diverse range of clients, contributing to the development and implementation of BI processes and Qlik Dashboards.",
+    "Delivered consulting services, providing expertise in BI infrastructure implementation and technical guidance to a diverse clientele, including advising on server acquisition, installation, security, governance, and automated reports.",
+    "Conducted comprehensive hands-on training sessions for large user groups, ensuring proficient utilization of tools and processes."
 ])
 
 # Certifications
