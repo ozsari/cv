@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title("![curriculum-vitae](https://github.com/user-attachments/assets/178ad900-0d36-467d-88cb-30f6d353cf94) My new app")
+st.title("![curriculum-vitae (1)](https://github.com/user-attachments/assets/12a2698c-3586-4beb-91bd-dee047b8e722) Ahmet Ozsari")
 st.write(
     "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
 )
