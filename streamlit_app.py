@@ -99,7 +99,7 @@ with cert_col2:
     st.write("Administer and Maintain Qlik Sense")
 
 with cert_col3:
-    dbt_logo = ![dbt_fundementals](https://github.com/user-attachments/assets/8d6a29cb-9fe2-451c-8684-2fdc13a96a42)
+    dbt_logo = load_image("https://github.com/user-attachments/assets/8d6a29cb-9fe2-451c-8684-2fdc13a96a42")
     if dbt_logo:
         st.image(dbt_logo, width=100)
     st.write("DBT Fundamentals")
