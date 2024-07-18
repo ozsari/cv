@@ -74,7 +74,7 @@ job("Business Intelligence Assistant Manager", "Modanisa", "Jul 2019 - Feb 2022"
 # Certifications
 st.header("Certifications")
 
-cert_col1, cert_col2, cert_col3 = st.columns(3)
+cert_col1, cert_col2 = st.columns(2)
 
 with cert_col1:
     qlik_logo = load_image("https://www.qlik.com/us/-/media/images/qlik/global/qlik-logo-2x.png")
@@ -85,10 +85,10 @@ with cert_col2:
     st.image(qlik_logo, width=100)
     st.write("Administer and Maintain Qlik Sense")
 
-with cert_col3:
-    dbt_logo = load_image("https://github.com/user-attachments/assets/8d6a29cb-9fe2-451c-8684-2fdc13a96a42")
-    st.image(dbt_logo, width=120)
-    st.write("DBT Fundamentals")
+# with cert_col3:
+    # dbt_logo = load_image("https://github.com/user-attachments/assets/8d6a29cb-9fe2-451c-8684-2fdc13a96a42")
+    # st.image(dbt_logo, width=120)
+    # st.write("DBT Fundamentals")
 
 # Education
 st.header("Education")
