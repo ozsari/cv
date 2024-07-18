@@ -10,21 +10,6 @@ def load_image(url):
 
 st.set_page_config(page_title="Ahmet Ozsari - CV") # , layout="wide"
 
-# Custom CSS for underlined headers
-st.markdown("""
-<style>
-.underline {
-    text-decoration: underline;
-    text-decoration-color: #000000;
-    text-decoration-thickness: 1px;
-    padding-bottom: 10px;
-}
-</style>
-""", unsafe_allow_html=True)
-
-# Function to create underlined headers
-def underlined_header(text):
-    st.markdown(f"<h2 class='underline'>{text}</h2>", unsafe_allow_html=True)
 
 # Header
 st.title("Ahmet Ozsari")
@@ -33,7 +18,7 @@ st.write("📍 Istanbul, TURKEY")
 st.write("📧 ozsariahmet@yahoo.com | 🔗 [LinkedIn](https://linkedin.com/in/ahmet-ozsari-6615b756)")
 
 # Summary
-underlined_header("Summary")
+st.header("Summary", divider='blue')
 st.write("""
 Experienced Data Engineer with a strong background in business intelligence, data modeling, and cloud
 services. Proficient in designing and implementing end-to-end data solutions, with a focus on AWS and
@@ -42,7 +27,7 @@ systems. Committed to continuous improvement and collaborative teamwork.
 """)
 
 # Skills
-underlined_header("Skills")
+st.header("Skills", divider='blue')
 skills = [
     "Data Integration and Processing",
     "Data Modeling and Warehouse Management",
@@ -60,7 +45,7 @@ for i, skill in enumerate(skills):
         col2.write(f"• {skill}")
 
 # Work Experience
-underlined_header("Work Experience")
+st.header("Work Experience", divider='blue')
 
 def job(title, company, period, responsibilities):
     st.subheader(f"{title} - {company}")
@@ -88,7 +73,7 @@ job("Business Intelligence Assistant Manager", "Modanisa", "Jul 2019 - Feb 2022"
 ])
 
 # Certifications
-underlined_header("Certifications")
+st.header("Certifications", divider='blue')
 
 cert_col1, cert_col2 = st.columns(2)
 
