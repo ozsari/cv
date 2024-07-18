@@ -109,7 +109,7 @@ st.markdown("""
     width: 100px;
 }
 .dbt-logo {
-    width: 100px;
+    width: 80px;
 }
 .multi-line {
     line-height: 1.2;
