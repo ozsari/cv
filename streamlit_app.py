@@ -87,12 +87,12 @@ with cert_col2:
     st.write("Administer and Maintain Qlik Sense")
 
 # Education
-underlined_header("Education")
+st.header("Education", divider='blue')
 st.subheader("Bachelor of Computer Engineering")
 st.write("Beykent University, Istanbul")
 st.write("*Sep 2008 - June 2013*")
 
 # Additional Information
-underlined_header("Additional Information")
+st.header("Additional Information", divider='blue')
 st.write("**Languages:** English, Turkish")
 st.write("**Technical Skills:** Data Engineering and Integration, Comprehensive ETL and ELT Processes, Data Modeling and Solution Development, Automation and Workflow Orchestration, Cloud Infrastructure Management, Business Intelligence and Advanced Analytics, Data Visualization, Data-Driven Decision Making")
