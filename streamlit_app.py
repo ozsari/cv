@@ -27,7 +27,7 @@ systems. Committed to continuous improvement and collaborative teamwork.
 """)
 
 # Skills
-st.header("Skills", divider='blue')
+st.header(':blue[Skills]', divider='blue')
 skills = [
     "Data Integration and Processing",
     "Data Modeling and Warehouse Management",
@@ -45,7 +45,7 @@ for i, skill in enumerate(skills):
         col2.write(f"• {skill}")
 
 # Work Experience
-st.header("Work Experience", divider='blue')
+st.header(':blue[Work Experience]', divider='blue')
 
 def job(title, company, period, responsibilities):
     st.subheader(f"{title} - {company}")
@@ -73,7 +73,7 @@ job("Business Intelligence Assistant Manager", "Modanisa", "Jul 2019 - Feb 2022"
 ])
 
 # Certifications
-st.header("Certifications", divider='blue')
+st.header(':blue[Certifications]', divider='blue')
 
 cert_col1, cert_col2 = st.columns(2)
 
@@ -87,12 +87,12 @@ with cert_col2:
     st.write("Administer and Maintain Qlik Sense")
 
 # Education
-st.header("Education", divider='blue')
+st.header(':blue[Education]', divider='blue')
 st.subheader("Bachelor of Computer Engineering")
 st.write("Beykent University, Istanbul")
 st.write("*Sep 2008 - June 2013*")
 
 # Additional Information
-st.header("Additional Information", divider='blue')
+st.header(':blue[Additional Information]', divider='blue')
 st.write("**Languages:** English, Turkish")
 st.write("**Technical Skills:** Data Engineering and Integration, Comprehensive ETL and ELT Processes, Data Modeling and Solution Development, Automation and Workflow Orchestration, Cloud Infrastructure Management, Business Intelligence and Advanced Analytics, Data Visualization, Data-Driven Decision Making")
