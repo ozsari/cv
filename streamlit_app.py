@@ -4,9 +4,14 @@ from PIL import Image
 from io import BytesIO
 
 def load_image(url):
-    response = requests.get(url)
-    img = Image.open(BytesIO(response.content))
-    return img
+    try:
+        response = requests.get(url)
+        response.raise_for_status()  # Raise an exception for bad status codes
+        img = Image.open(BytesIO(response.content))
+        return img
+    except Exception as e:
+        st.error(f"Error loading image from {url}: {str(e)}")
+        return None
 
 st.set_page_config(page_title="Ahmet Ozsari - CV", layout="wide")
 
@@ -83,17 +88,20 @@ cert_col1, cert_col2, cert_col3 = st.columns(3)
 
 with cert_col1:
     qlikview_logo = load_image("https://www.qlik.com/us/-/media/images/qlik/global/qlik-logo-2x.png")
-    st.image(qlikview_logo, width=100)
+    if qlikview_logo:
+        st.image(qlikview_logo, width=100)
     st.write("QlikView Developer")
 
 with cert_col2:
     qlik_sense_logo = load_image("https://www.qlik.com/us/-/media/images/qlik/global/qlik-logo-2x.png")
-    st.image(qlik_sense_logo, width=100)
+    if qlik_sense_logo:
+        st.image(qlik_sense_logo, width=100)
     st.write("Administer and Maintain Qlik Sense")
 
 with cert_col3:
-    dbt_logo = load_image("https://www.getdbt.com/ui/img/logos/dbt-logo.svg")
-    st.image(dbt_logo, width=100)
+    dbt_logo = load_image("https://assets.website-files.com/6097e0eca1e87557da031fef/6284742a6853f45d0bdb8746_dbt-bit_tm.png")
+    if dbt_logo:
+        st.image(dbt_logo, width=100)
     st.write("DBT Fundamentals")
 
 # Additional Information
