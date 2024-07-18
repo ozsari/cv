@@ -87,45 +87,50 @@ st.markdown("""
 <style>
 .cert-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
     margin-top: 20px;
+    gap: 40px;
 }
 .cert-item {
-    flex: 1;
-    text-align: left;
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 .cert-logo {
-    max-width: 100px;
     margin-bottom: 10px;
 }
 .cert-name {
     font-weight: normal;
-    font-size: 16px;
-    margin-top: 5px;
+    font-size: 14px;
+    text-align: left;
 }
-.cert-name-multiline {
+.qlik-logo {
+    width: 100px;
+}
+.dbt-logo {
+    width: 120px;
+}
+.multi-line {
     line-height: 1.2;
 }
 </style>
 """, unsafe_allow_html=True)
 
-# Certifications
 st.header("Certifications")
 
 cert_html = """
 <div class="cert-container">
     <div class="cert-item">
-        <img src="https://www.qlik.com/us/-/media/images/qlik/global/qlik-logo-2x.png" class="cert-logo">
+        <img src="https://www.qlik.com/us/-/media/images/qlik/global/qlik-logo-2x.png" class="cert-logo qlik-logo">
         <div class="cert-name">QlikView Developer</div>
     </div>
     <div class="cert-item">
-        <img src="https://www.qlik.com/us/-/media/images/qlik/global/qlik-logo-2x.png" class="cert-logo">
-        <div class="cert-name cert-name-multiline">Administer and Maintain Qlik<br>Sense</div>
+        <img src="https://www.qlik.com/us/-/media/images/qlik/global/qlik-logo-2x.png" class="cert-logo qlik-logo">
+        <div class="cert-name multi-line">Administer and Maintain Qlik<br>Sense</div>
     </div>
     <div class="cert-item">
-        <img src="https://github.com/user-attachments/assets/8d6a29cb-9fe2-451c-8684-2fdc13a96a42" class="cert-logo">
+        <img src="https://github.com/user-attachments/assets/8d6a29cb-9fe2-451c-8684-2fdc13a96a42" class="cert-logo dbt-logo">
         <div class="cert-name">DBT Fundamentals</div>
     </div>
 </div>
