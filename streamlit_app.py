@@ -13,7 +13,7 @@ def load_image(url):
         st.error(f"Error loading image from {url}: {str(e)}")
         return None
 
-st.set_page_config(page_title="Ahmet Ozsari - CV", layout="wide")
+st.set_page_config(page_title="Ahmet Ozsari - CV") # , layout="wide"
 
 # Header
 st.title("Ahmet Ozsari")
