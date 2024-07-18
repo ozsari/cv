@@ -13,7 +13,7 @@ st.set_page_config(page_title="Ahmet Ozsari - CV") # , layout="wide"
 # Header
 st.title("Ahmet Ozsari")
 st.subheader("Data Engineer")
-st.write("📍 4. Levent, Istanbul")
+st.write("📍 Istanbul, TURKEY")
 st.write("📧 ozsariahmet@yahoo.com | 🔗 [LinkedIn](https://linkedin.com/in/ahmet-ozsari-6615b756)")
 
 # Summary
