@@ -86,23 +86,34 @@ st.write("*Sep 2008 - June 2013*")
 st.header("Certifications")
 cert_col1, cert_col2, cert_col3 = st.columns(3)
 
-with cert_col1:
-    qlikview_logo = load_image("https://www.qlik.com/us/-/media/images/qlik/global/qlik-logo-2x.png")
-    if qlikview_logo:
-        st.image(qlikview_logo, width=100)
-    st.write("QlikView Developer")
+def display_certificate(col, logo_url, cert_name):
+    with col:
+        container = st.container()
+        with container:
+            logo = load_image(logo_url)
+            if logo:
+                st.image(logo, width=100)
+            else:
+                st.write("Logo not available")
+            st.write(f"**{cert_name}**")
 
-with cert_col2:
-    qlik_sense_logo = load_image("https://www.qlik.com/us/-/media/images/qlik/global/qlik-logo-2x.png")
-    if qlik_sense_logo:
-        st.image(qlik_sense_logo, width=100)
-    st.write("Administer and Maintain Qlik Sense")
+display_certificate(
+    cert_col1,
+    "https://www.qlik.com/us/-/media/images/qlik/global/qlik-logo-2x.png",
+    "QlikView Developer"
+)
 
-with cert_col3:
-    dbt_logo = load_image("https://github.com/user-attachments/assets/8d6a29cb-9fe2-451c-8684-2fdc13a96a42")
-    if dbt_logo:
-        st.image(dbt_logo, width=100)
-    st.write("DBT Fundamentals")
+display_certificate(
+    cert_col2,
+    "https://www.qlik.com/us/-/media/images/qlik/global/qlik-logo-2x.png",
+    "Administer and Maintain Qlik Sense"
+)
+
+display_certificate(
+    cert_col3,
+    "https://github.com/user-attachments/assets/8d6a29cb-9fe2-451c-8684-2fdc13a96a42",
+    "DBT Fundamentals"
+)
 
 # Additional Information
 st.header("Additional Information")
