@@ -1,4 +1,4 @@
-# ![curriculum-vitae](https://github.com/user-attachments/assets/178ad900-0d36-467d-88cb-30f6d353cf94) Curriculum Vitae
+# ![curriculum-vitae (1)](https://github.com/user-attachments/assets/12a2698c-3586-4beb-91bd-dee047b8e722) Curriculum Vitae
 
 A simple Streamlit app cv for you to modify!
 
@@ -17,4 +17,5 @@ A simple Streamlit app cv for you to modify!
    ```
    $ streamlit run streamlit_app.py
    ```
+
 
