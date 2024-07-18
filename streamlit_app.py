@@ -86,15 +86,18 @@ st.header("Certifications")
 cert_col1, cert_col2, cert_col3 = st.columns(3)
 
 with cert_col1:
-    st.image("/api/placeholder/100/100", width=100)
+    qlikview_logo = load_image("https://www.qlik.com/us/-/media/images/qlik/global/qlik-logo-2x.png")
+    st.image(qlikview_logo, width=100)
     st.write("QlikView Developer")
 
 with cert_col2:
-    st.image("/api/placeholder/100/100", width=100)
+    qlik_sense_logo = load_image("https://www.qlik.com/us/-/media/images/qlik/global/qlik-logo-2x.png")
+    st.image(qlik_sense_logo, width=100)
     st.write("Administer and Maintain Qlik Sense")
 
 with cert_col3:
-    st.image("/api/placeholder/100/100", width=100)
+    dbt_logo = load_image("https://www.getdbt.com/ui/img/logos/dbt-logo.svg")
+    st.image(dbt_logo, width=100)
     st.write("DBT Fundamentals")
 
 # Additional Information
