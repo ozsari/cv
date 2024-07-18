@@ -10,14 +10,30 @@ def load_image(url):
 
 st.set_page_config(page_title="Ahmet Ozsari - CV") # , layout="wide"
 
+# Custom CSS for underlined headers
+st.markdown("""
+<style>
+.underline {
+    text-decoration: underline;
+    text-decoration-color: #000000;
+    text-decoration-thickness: 1px;
+    padding-bottom: 10px;
+}
+</style>
+""", unsafe_allow_html=True)
+
+# Function to create underlined headers
+def underlined_header(text):
+    st.markdown(f"<h2 class='underline'>{text}</h2>", unsafe_allow_html=True)
+
 # Header
 st.title("Ahmet Ozsari")
-st.subheader("Data Engineer")
+st.subheader("Experienced Data Engineer")
 st.write("📍 Istanbul, TURKEY")
 st.write("📧 ozsariahmet@yahoo.com | 🔗 [LinkedIn](https://linkedin.com/in/ahmet-ozsari-6615b756)")
 
 # Summary
-st.header("Summary")
+underlined_header("Summary")
 st.write("""
 Experienced Data Engineer with a strong background in business intelligence, data modeling, and cloud
 services. Proficient in designing and implementing end-to-end data solutions, with a focus on AWS and
@@ -26,7 +42,7 @@ systems. Committed to continuous improvement and collaborative teamwork.
 """)
 
 # Skills
-st.header("Skills")
+underlined_header("Skills")
 skills = [
     "Data Integration and Processing",
     "Data Modeling and Warehouse Management",
@@ -44,7 +60,7 @@ for i, skill in enumerate(skills):
         col2.write(f"• {skill}")
 
 # Work Experience
-st.header("Work Experience")
+underlined_header("Work Experience")
 
 def job(title, company, period, responsibilities):
     st.subheader(f"{title} - {company}")
@@ -72,7 +88,7 @@ job("Business Intelligence Assistant Manager", "Modanisa", "Jul 2019 - Feb 2022"
 ])
 
 # Certifications
-st.header("Certifications")
+underlined_header("Certifications")
 
 cert_col1, cert_col2 = st.columns(2)
 
@@ -85,18 +101,13 @@ with cert_col2:
     st.image(qlik_logo, width=100)
     st.write("Administer and Maintain Qlik Sense")
 
-# with cert_col3:
-    # dbt_logo = load_image("https://github.com/user-attachments/assets/8d6a29cb-9fe2-451c-8684-2fdc13a96a42")
-    # st.image(dbt_logo, width=120)
-    # st.write("DBT Fundamentals")
-
 # Education
-st.header("Education")
+underlined_header("Education")
 st.subheader("Bachelor of Computer Engineering")
 st.write("Beykent University, Istanbul")
 st.write("*Sep 2008 - June 2013*")
 
 # Additional Information
-st.header("Additional Information")
+underlined_header("Additional Information")
 st.write("**Languages:** English, Turkish")
 st.write("**Technical Skills:** Data Engineering and Integration, Comprehensive ETL and ELT Processes, Data Modeling and Solution Development, Automation and Workflow Orchestration, Cloud Infrastructure Management, Business Intelligence and Advanced Analytics, Data Visualization, Data-Driven Decision Making")
