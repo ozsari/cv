@@ -8,7 +8,7 @@ def load_image(url):
     img = Image.open(BytesIO(response.content))
     return img
 
-st.set_page_config(page_title="Ahmet Ozsari - CV", layout="wide")
+st.set_page_config(page_title="Ahmet Ozsari - CV") # , layout="wide"
 
 # Header
 st.title("Ahmet Ozsari")
